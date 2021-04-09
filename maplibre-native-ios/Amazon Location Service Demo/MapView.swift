@@ -25,7 +25,7 @@ struct MapView: UIViewRepresentable {
         MGLOfflineStorage.shared.delegate = signingDelegate
 
         mapView = MGLMapView(
-            frame: .zero,
+            frame: CGRect(x: 0, y: 0, width: 50, height: 100),
             styleURL: URL(string: "https://maps.geo.\(regionName).amazonaws.com/maps/v0/maps/\(mapName)/style-descriptor"))
 
         _attribution = attribution
