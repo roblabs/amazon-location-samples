@@ -78,9 +78,12 @@
           zoom: 10, // initial map zoom
           style: mapName,
           transformRequest,
+          hash: true
         });
 
         map.addControl(new mapboxgl.NavigationControl(), "top-left");
+        map.showTileBoundaries = true;
+        map.showCollisionBoxes = true;
       }
 
       initializeMap();
